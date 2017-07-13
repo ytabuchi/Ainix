@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="AinixSample.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AinixSample"
+             Title="Tcp/Http Client"
+             Padding="4">
+
+    <Grid ColumnSpacing="8"
+          RowSpacing="4"
+          VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="接続先"
+               VerticalTextAlignment="Center" />
+        <Picker x:Name="picker"
+                Title="接続先を選択"
+                Grid.Row="0"
+                Grid.Column="1" />
+        <Label Grid.Row="1"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="担当者"
+               VerticalTextAlignment="Center" />
+        <Entry x:Name="Name"
+               Grid.Row="1"
+               Grid.Column="1"
+               Text="Yoshito Tabuchi" />
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="商品"
+               VerticalTextAlignment="Center" />
+        <Entry x:Name="Product"
+               Grid.Row="2"
+               Grid.Column="1"
+               Text="EF500" />
+        <Label Grid.Row="3"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="ロット"
+               VerticalTextAlignment="Center" />
+        <Entry x:Name="Lot"
+               Grid.Row="3"
+               Grid.Column="1"
+               Text="Ainix" />
+        <Label Grid.Row="4"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="日付"
+               VerticalTextAlignment="Center" />
+        <DatePicker x:Name="Date"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Date="2017/7/13"
+                    Format="yyyy/MM/dd" />
+        <Label Grid.Row="5"
+               Grid.Column="0"
+               HorizontalTextAlignment="End"
+               Text="時間"
+               VerticalTextAlignment="Center" />
+        <TimePicker x:Name="Time"
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Time="12:00:00" />
+
+        <Button Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="SocketButton_Clicked"
+                Text="Socket Send" />
+
+        <Button Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="HttpPostButton_Clicked"
+                Text="Http Post Send" />
+
+        <Button Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="HttpGetButton_Clicked"
+                Text="Http Get Send" />
+
+
+    </Grid>
+
+</ContentPage>
