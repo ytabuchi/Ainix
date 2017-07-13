@@ -4,6 +4,7 @@ using System.Text;
 
 namespace AinixSample
 {
+    // Please copy this file as Secrets.cs and uncomment.
     //public class Secrets
     //{
     //    // Please replace API Server user token.
